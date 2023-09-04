@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transfer Tracker</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-family:'Courier New', Courier, monospace;
+    }
+
+    #team-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+      
+        .active{
+            background-color: #f0f0f0; /* Change to your desired highlight color */
+        }
+    }
+
+    #team-list li {
+      cursor: pointer;
+      margin: auto;
+      padding: 10px;
+      border: 1px solid white;
+      margin-bottom: 3px;
+      border: 3px solid var(--primary-color);
+      font-weight: bold;
+      border-radius: 3em;
+      width: 15em;   /* Adjust the width to your desired size */
+      height: 1em;
+      text-align: center;
+      
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>Scambi asta day-by-day</h1>
+
+  <ul id="team-list">
+    <li data-team="Blanchito">Blanchito</li>
+    <li data-team="Di Pianos FC">Di Pianos FC</li>
+    <li data-team="OTTAVA">OTTAVA</li>
+    <li data-team="Longobarda">Longobarda</li>
+    <li data-team="Pro Secco">Pro Secco</li>
+    <li data-team="RancioFellone">RancioFellone</li>
+    <li data-team="TeamPE FC">TeamPE FC</li>
+    <li data-team="Theprojectcontinues">Theprojectcontinues</li>
+  </ul>
+
+  <div id="table-container"></div>
+
+  <script>
+    const teamList = document.getElementById("team-list");
+    const tableContainer = document.getElementById("table-container");
+
+    teamList.addEventListener("click", async (event) => {
+        if (event.target.tagName === "LI") {
+        // Remove class from previously clicked item
+        const previouslyClicked = teamList.querySelector(".active");
+        if (previouslyClicked) {
+            previouslyClicked.classList.remove("active");
+        }
+
+        // Add class to the clicked item
+        event.target.classList.add("active");
+
+        const selectedTeam = event.target.getAttribute("data-team");
+        const teamData = await fetchTeamData(); // Fetch the team data
+        const table = generateTable(selectedTeam, teamData);
+        tableContainer.innerHTML = "";
+        tableContainer.appendChild(table);
+        }
+    });
+
+    async function fetchTeamData() {
+        const response = await fetch("teamData.json");
+        const data = await response.json();
+        return data;
+    }
+
+    function generateTable(team, teamData) {
+    const table = document.createElement("table");
+    const headers = ["GIORNATA", "IN - OUT", "TOTALE"];
+
+    const thead = document.createElement("thead");
+    const trHead = document.createElement("tr");
+    headers.forEach(headerText => {
+        const th = document.createElement("th");
+        th.textContent = headerText;
+        trHead.appendChild(th);
+    });
+    thead.appendChild(trHead);
+    table.appendChild(thead);
+
+    const tbody = document.createElement("tbody");
+
+    let totalSpending = 0; // Initialize the total spending counter
+
+    teamData[team].forEach(row => {
+        const tr = document.createElement("tr");
+        const tdNumber = document.createElement("td");
+        tdNumber.textContent = row.number;
+        tr.appendChild(tdNumber);
+        
+        const tdTransfers = document.createElement("td");
+        tdTransfers.textContent = row.transfers.join(", ");
+        tr.appendChild(tdTransfers);
+        
+        const tdTotalSpending = document.createElement("td");
+        tdTotalSpending.textContent = row.total;
+        tr.appendChild(tdTotalSpending);
+
+        totalSpending += row.total; // Add row's total to the overall total
+        
+        tbody.appendChild(tr);
+    });
+
+    // Add a row for the total spending
+    const trTotal = document.createElement("tr");
+    const tdTotalLabel = document.createElement("td");
+    tdTotalLabel.textContent = "Totale →";
+    tdTotalLabel.colSpan = 2;
+    trTotal.appendChild(tdTotalLabel);
+
+    const tdTotalSpending = document.createElement("td");
+    tdTotalSpending.textContent = totalSpending;
+    trTotal.appendChild(tdTotalSpending);
+
+    tbody.appendChild(trTotal);
+
+    table.appendChild(tbody);
+
+    return table;
+    }
+  </script>
+</body>
+</html>

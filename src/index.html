@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanta90meno1 23-24</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="navbar"> <!-- use name for reference in css -->
+        <div id="contentContainer" class="container">
+            <a class="logo" href="https://leghe.fantacalcio.it/" target="_blank"><span> Leghe </span></a>
+            <!--"id" has to be unique, different than class-->
+            <img id="mobile-cta" class= "mobile-menu" src="images/menu.svg" alt="Open it">
+            <nav>
+                <img id="mobile-exit" class= "mobile-menu-exit" src="images/exit.svg" alt="close it">
+                <ul class="primary-nav">
+                    <li id="regol" class="regol-class"><a>Regolamento</a></li>
+                    <li id="asta" ><a href="asta.html">Asta day-by-day</a></li>
+                    
+  
+                </ul>
+
+                <ul class="secondary-nav">
+                    <li ><a href=""></a></li>
+                    <!-- go-premium-cta -->
+                    <li class=""><a href=""></a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </div>
+    <div id="pageContent">
+        <!-- Content of page_a.html will be loaded here -->
+    </div>
+
+    <script>
+        function loadPageContent(pageName) {
+            document.getElementById('home-page').style.display = 'none';
+            fetch(pageName).then(response => response.text())
+                           .then(content => {
+                                document.getElementById('pageContent').innerHTML = content;
+                                            })
+                            .catch(error => {console.error('Error loading page content:', error);
+                                            });
+                                        }
+
+        // Attach click event listeners to the buttons
+    document.getElementById('regol').addEventListener('click', function() {
+        loadPageContent('regolamento.html');
+    });
+
+    document.getElementById('squadre').addEventListener('click', function() {
+        loadPageContent('asta.html');
+    });
+    </script>
+
+    <div id="home-page">
+    <section class="hero">
+        <div class="container">
+            <div class="left-col">
+                <p class="subhead"> </p>
+                <h1> </h1>
+                <div class="hero-cta">
+                    <a href="images/home-page.jpeg" class="primary-cta">ClICCA QUI PER CONOSCERE LA SQUADRA VINCITRICE</a>
+                    <a href="" class="watch-video-cta">
+                        <img src="" alt=""></a>
+                </div>
+            </div>
+
+            <img src="" alt="" alt="">
+        </div>
+
+    </section>
+
+    
+
+    <!-- add some animations with js-->
+    <script>
+
+        const mobileBtn = document.getElementById('mobile-cta') /* use "id" property for referencing*/
+              nav = document.querySelector('nav')
+              mobileBtnExit = document.getElementById('mobile-exit'); /* white exit icon*/
+
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.add('menu-btn');
+        })
+
+        mobileBtnExit.addEventListener('click', () => {
+            nav.classList.remove('menu-btn');
+        })
+
+    </script>
+
+
+
+
+</body>
+</html>
