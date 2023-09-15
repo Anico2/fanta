@@ -77,14 +77,16 @@ section {
   font-size: 1.4em;
   border-radius: 5em;
   font-weight: bold;
-  display: inline-block;
-  align-items: center;
+  display: inline-block; /* Make the anchor element a block-level element */
+  margin: auto; /* Center horizontally using margin */
+  text-align: center; /* Center the text inside the anchor */
 }
-.left-col .watch-video-cta {
+
+.watch-video-cta {
   display: block;
   margin-top: 1em; /*short for: margin: 1em 0 0 0;*/
 }
-.left-col .watch-video-cta img {
+.watch-video-cta img {
   margin-right: 0.5em;
 }
 

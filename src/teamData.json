@@ -1,5 +1,5 @@
 {
-  "Blanchito": [
+  "blanchito": [
     { "number": "1ᵃ (4ᵃ SerieA)", "transfers": ["AA → BB (0.21)", "CC → DD (0.21)"], "total": 0.42},
     { "number": "2ᵃ (5ᵃ SerieA)", "transfers": [], "total": 0},
     { "number": "3ᵃ (6ᵃ SerieA)", "transfers": [], "total": 0},
@@ -37,8 +37,8 @@
     { "number": "35ᵃ (38ᵃ SerieA)", "transfers": [], "total": 0}
 
   ],
-
-  "Di Pianos FC": [
+  
+  "CSKA AQUARA": [
     { "number": "1ᵃ (4ᵃ SerieA)", "transfers": ["AA → BB (0.22)", "CC → DD (0.22)"], "total": 0.44},
     { "number": "2ᵃ (5ᵃ SerieA)", "transfers": [], "total": 0},
     { "number": "3ᵃ (6ᵃ SerieA)", "transfers": [], "total": 0},
@@ -76,7 +76,7 @@
     { "number": "35ᵃ (38ᵃ SerieA)", "transfers": [], "total": 0}
   ],
 
-  "OTTAVA": [
+  "Di Pianos FC": [
     { "number": "1ᵃ (4ᵃ SerieA)", "transfers": ["AA → BB (0.23)", "CC → DD (0.23)"], "total": 0.46},
     { "number": "2ᵃ (5ᵃ SerieA)", "transfers": [], "total": 0},
     { "number": "3ᵃ (6ᵃ SerieA)", "transfers": [], "total": 0},
@@ -152,7 +152,7 @@
     { "number": "35ᵃ (38ᵃ SerieA)", "transfers": [], "total": 0}
   ],
 
-  "Pro Secco": [
+  "Marric": [
     { "number": "1ᵃ (4ᵃ SerieA)", "transfers": ["AA → BB (0.25)", "CC → DD (0.25)"], "total": 0.5},
     { "number": "2ᵃ (5ᵃ SerieA)", "transfers": [], "total": 0},
     { "number": "3ᵃ (6ᵃ SerieA)", "transfers": [], "total": 0},
@@ -190,7 +190,7 @@
     { "number": "35ᵃ (38ᵃ SerieA)", "transfers": [], "total": 0}
   ],
 
-  "RancioFellone": [
+  "Pro Secco": [
     { "number": "1ᵃ (4ᵃ SerieA)", "transfers": ["AA → BB (0.26)", "CC → DD (0.26)"], "total": 0.52},
     { "number": "2ᵃ (5ᵃ SerieA)", "transfers": [], "total": 0},
     { "number": "3ᵃ (6ᵃ SerieA)", "transfers": [], "total": 0},
@@ -228,7 +228,7 @@
     { "number": "35ᵃ (38ᵃ SerieA)", "transfers": [], "total": 0}
   ],
 
-  "TeamPE FC": [
+  "RancioFellone": [
     { "number": "1ᵃ (4ᵃ SerieA)", "transfers": ["AA → BB (0.27)", "CC → DD (0.27)"], "total": 0.54},
     { "number": "2ᵃ (5ᵃ SerieA)", "transfers": [], "total": 0},
     { "number": "3ᵃ (6ᵃ SerieA)", "transfers": [], "total": 0},

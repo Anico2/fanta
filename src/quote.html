@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote Fantacalcio</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    #team-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    /* Use classes to specify the payment status */
+    .paid {
+      background-color: green;
+    }
+
+    .not-paid {
+      background-color: red;
+    }
+
+    #team-list li {
+      margin: auto;
+      padding: 10px;
+      border: 1px solid white;
+      margin-bottom: 3px;
+      border: 3px solid var(--primary-color);
+      font-weight: bold;
+      border-radius: 3em;
+      width: 15em;   /* Adjust the width to your desired size */
+      height: 1em;
+      text-align: center;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+
+    /* Add a legend */
+    .legend {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .legend-item {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .legend-item span {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+      border-radius: 50%;
+    }
+
+    .legend-item .paid-color {
+      background-color: green;
+    }
+
+    .legend-item .not-paid-color {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quote Fantacalcio</h1>
+
+  <ul id="team-list">
+    <li data-team="blanchito" class="not-paid">blanchito</li>
+    <li data-team="CSKA AQUARA" class="paid">CSKA AQUARA</li>
+    <li data-team="Di Pianos FC" class="not-paid">Di Pianos FC</li>
+    <li data-team="Longobarda" class="not-paid">Longobarda</li>
+    <li data-team="Marric" class="not-paid">Marric</li>
+    <li data-team="Pro Secco" class="not-paid">Pro Secco</li>
+    <li data-team="RancioFellone" class="not-paid">RancioFellone</li>
+    <li data-team="Theprojectcontinues" class="not-paid">Theprojectcontinues</li>
+  </ul>
+
+  <div id="table-container"></div>
+
+  <!-- Legend -->
+  <div class="legend">
+    <div class="legend-item">
+      <span class="paid-color"></span> Pagato 50 euro
+    </div>
+    <div class="legend-item">
+      <span class="not-paid-color"></span> Non Pagato
+    </div>
+  </div>
+</body>
+</html>
