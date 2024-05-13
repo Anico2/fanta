@@ -255,7 +255,8 @@
   "Rancio Fellone": [
     { "number": "1ᵃ (4ᵃ SerieA)", "transfers": ["---"], "total": 0},
     { "number": "2ᵃ (5ᵃ SerieA)", "transfers": ["---"], "total": 0},
-    { "number": "3ᵃ (6ᵃ SerieA)", "transfers": ["Ricardo Rodriguez → Dodo (0.2)", "Pedro → Caprari (0.2)"], "total": 0.4},
+    { "number": "3ᵃ (6ᵃ SerieA)", "transfers": ["Ricardo Rodriguez → Dodo (0.2)", 
+      "Pedro → Caprari (0.2)"], "total": 0.4},
     { "number": "4ᵃ (7ᵃ SerieA)", "transfers": ["---"], "total": 2.8},
     { "number": "5ᵃ (8ᵃ SerieA)", "transfers": ["---"], "total": 0},
     { "number": "6ᵃ (9ᵃ SerieA)", "transfers": ["Mckennie → Fagioli (2.8)"], "total": 2.8},
@@ -273,7 +274,7 @@
     { "number": "18ᵃ (21ᵃ SerieA)", "transfers": ["---"], "total": 0},
     { "number": "19ᵃ (22ᵃ SerieA)", "transfers": ["---"], "total": 0},
     { "number": "20ᵃ (23ᵃ SerieA)", "transfers": ["---"], "total": 0},
-    { "number": "21ᵃ (24ᵃ SerieA)", ["casale → boateng (0.2)"], "total": 0.2},
+    { "number": "21ᵃ (24ᵃ SerieA)", "transfers": ["casale → boateng (0.2)"], "total": 0.2},
     { "number": "22ᵃ (25ᵃ SerieA)", "transfers": ["---"], "total": 0},
     { "number": "23ᵃ (26ᵃ SerieA)", "transfers": ["---"], "total": 0},
     { "number": "24ᵃ (27ᵃ SerieA)", "transfers": ["---"], "total": 0},
@@ -286,7 +287,7 @@
     { "number": "31ᵃ (34ᵃ SerieA)", "transfers": ["---"], "total": 0},
     { "number": "32ᵃ (35ᵃ SerieA)", "transfers": ["ferguson → gaetano (0.2)", 
                                                     "malinoschi → mazzitelli (0.2)",
-                                                    "boateng → zortea (0.2)"], "total": 0.6}, "total": 0.6},
+                                                    "boateng → zortea (0.2)"], "total": 0.6},
     { "number": "33ᵃ (36ᵃ SerieA)", "transfers": ["---"], "total": 0},
     { "number": "34ᵃ (37ᵃ SerieA)", "transfers": ["---"], "total": 0},
     { "number": "35ᵃ (38ᵃ SerieA)", "transfers": ["---"], "total": 0}
